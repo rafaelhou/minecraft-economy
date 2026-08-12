@@ -10,6 +10,9 @@
 
 架構參考 [小小巴菲特](https://buffett-kids.pages.dev/)。
 
+上線網址：<https://minecraft-economy-9l2.pages.dev/>（`minecraft-economy.pages.dev` 已被別人占用）
+鏡像：<https://rafaelhou.github.io/minecraft-economy/>
+
 ## 兩站的關係
 
 這站講的是**巴菲特那一派**：自己挑會賺錢的東西。
