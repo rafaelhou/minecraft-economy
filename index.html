@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>麥塊生存經濟學 — 用麥塊學會怎麼把東西變多</title>
+<meta name="description" content="用 Minecraft 的農場、村民交易和礦坑，把巴菲特的投資觀念講給小學生聽。12 堂課、3 個小遊戲、15 枚獎章，低年級與中高年級各有一套講法。">
+<meta name="theme-color" content="#4a7c3f">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">給 7–12 歲</p>
+    <h1>麥塊生存經濟學</h1>
+    <p class="sub">你在麥塊裡蓋自動農場、跟村民交易、規劃礦坑——這些其實就是大人說的「投資」。<br>
+      這裡把巴菲特挑公司的方法，換成你已經很熟的麥塊語言。</p>
+    <div class="hero-stat">
+      <span><b id="statLesson">0</b> / 12 課</span>
+      <span><b id="statGame">0</b> / 3 遊戲</span>
+      <span><b id="statBadge">0</b> / 15 獎章</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="閱讀設定" data-no-zhuyin>
+  <div class="wrap tb">
+    <div class="tb-group" role="group" aria-label="難度">
+      <span class="tb-label">講法</span>
+      <button type="button" class="tb-btn" data-level="easy">低年級</button>
+      <button type="button" class="tb-btn" data-level="hard">中高年級</button>
+    </div>
+    <div class="tb-group" role="group" aria-label="字級">
+      <span class="tb-label">字級</span>
+      <button type="button" class="tb-btn" data-font="s">A−</button>
+      <button type="button" class="tb-btn" data-font="m">中</button>
+      <button type="button" class="tb-btn" data-font="l">A＋</button>
+    </div>
+    <div class="tb-group">
+      <button type="button" class="tb-btn" id="zyBtn" aria-pressed="true">ㄅㄆㄇ 注音</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="wrap sec">
+    <h2 class="sec-h">十二堂課</h2>
+    <p class="sec-p">照順序上最好，但你也可以先挑有興趣的。每一課最後有一題測驗，答對就拿到獎章。</p>
+    <ol class="cards" id="lessonList"></ol>
+  </section>
+
+  <section class="wrap sec">
+    <h2 class="sec-h">三個小遊戲</h2>
+    <p class="sec-p">課上完了，來玩玩看。這三個遊戲會讓你自己做決定，然後看到決定的後果。</p>
+    <div class="cards games" id="gameList"></div>
+  </section>
+
+  <section class="wrap sec">
+    <h2 class="sec-h">獎章牆</h2>
+    <p class="sec-p">拿滿 15 枚就畢業了。進度存在這台裝置上，換一台就要重來。</p>
+    <div class="badges" id="badgeWall"></div>
+    <button type="button" class="reset-all" id="resetAll">清除所有進度</button>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>這站講的是<b>巴菲特那一派</b>：自己挑會賺錢的東西。<br>
+      另一派是「不挑，全部都買一點」——那在 <a href="https://kids-investing.pages.dev/" target="_blank" rel="noopener">錢會自己長大嗎？</a> 裡。<br>
+      兩派都是對的，第 12 課會告訴你為什麼。</p>
+    <p class="small">Minecraft 是 Mojang 的商標，本站與 Mojang、Microsoft 無關，只是拿它當比喻。<br>
+      內容為家長自製的教材，不是投資建議。<span id="counter" class="counter" hidden data-no-zhuyin>已經有 <b id="view-count">—</b> 次瀏覽</span></p>
+  </div>
+</footer>
+
+<!-- 課程閱讀器 -->
+<div class="reader" id="reader" hidden>
+  <div class="reader-bar">
+    <button type="button" class="rd-close" id="rdClose" aria-label="關閉">✕</button>
+    <span class="rd-title" id="rdTitle"></span>
+    <span class="rd-count" id="rdCount"></span>
+  </div>
+  <div class="rd-progress"><i id="rdBar"></i></div>
+  <div class="reader-body" id="rdBody"></div>
+  <div class="reader-nav">
+    <button type="button" class="rd-prev" id="rdPrev">← 上一頁</button>
+    <button type="button" class="rd-next" id="rdNext">下一頁 →</button>
+  </div>
+</div>
+
+<script src="zhuyin.js"></script>
+<script src="zhuyin-extra.js"></script>
+<script src="zhuyin-mc.js"></script>
+<script src="art.js"></script>
+<script src="data/lessons.js"></script>
+<script src="data/lessons2.js"></script>
+<script src="games.js"></script>
+<script src="app.js"></script>
+<script src="zhuyin-run.js"></script>
+<script src="counter.js"></script>
+</body>
+</html>
